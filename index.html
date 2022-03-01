@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pr - br">
+<head>
+    <meta charset="UTF-8">
+    <title> Meu Contador</title>
+    <style>
+        *
+         {
+            margin:0; 
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: black;
+            background-image: url(https://services.meteored.com/img/article/cientistas-podem-ter-descoberto-a-quinta-forca-fundamental-do-universo-220621-1_1024.jpg);
+            color: white;
+            display: grid;
+            place-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        div {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Contador</h1>
+        <p id="resultado"></p>
+        <button onclick="diminuir()">menos</button>
+        <button onclick="aumentar()">mais</button>
+    </div>
+    <script>
+        // Criar uma variável que mude o estado da minha aplicação.
+        let numero = 0
+        // São os aplicadores de estados das aplicações
+        function diminuir() {
+            numero = numero - 1 
+            UpdateNaTela()
+        }
+        function aumentar() {
+            numero = numero + 1 
+            UpdateNaTela()
+        }   
+        // Update do estado da aplicação na tela 
+        function UpdateNaTela() {
+            const p = document.querySelector("#resultado")
+            console.log(p)
+            p.innerText = numero
+        }
+        // iniciar "chamar a função"
+        UpdateNaTela()
+    </script>
+</body>
+</html>
